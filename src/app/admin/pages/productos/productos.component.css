@@ -1,0 +1,82 @@
+.producto-container {
+  padding: 2rem;
+}
+
+.producto-container h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.filtro-categoria {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filtro-categoria label {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.filtro-categoria select {
+  padding: 0.4rem 0.8rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.producto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 1.5rem;
+}
+
+.producto-card {
+  max-width: 100%;
+}
+
+.producto-card img {
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px 4px 0 0;
+}
+
+.color-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.color-container .color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+.header-tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.header-tools button {
+  height: 40px;
+  padding: 0 1rem;
+}
+
+.estado-inactivo {
+  color: #c62828;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-left: 8px;
+  background-color: #ffcdd2;
+  padding: 2px 6px;
+  border-radius: 4px;
+}

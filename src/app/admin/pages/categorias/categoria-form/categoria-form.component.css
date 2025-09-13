@@ -1,0 +1,25 @@
+.full-width {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.formulario-modal {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 100%;
+}
+
+.acciones-modal {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.mat-dialog-container {
+  border-radius: 10px;
+  padding: 24px !important;
+  max-height: unset !important;
+  overflow: visible !important;
+}

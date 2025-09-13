@@ -1,0 +1,220 @@
+Documents\okBrandingProyect\frontend-okbranding\src\app\admin\pages\colores\colores.component.css
+
+/* Contenedor principal */
+.colores-container {
+  overflow-x: auto;
+  width: 85%;
+  margin: 5px auto;
+  background: #ffffff;
+  padding: 5px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado */
+.colores-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1d3557;
+  padding: 18px;
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.colores-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Botón profesional */
+.boton-profesional {
+  background: #e63946;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.boton-profesional:hover {
+  background: #d62839;
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
+  transform: translateY(-2px);
+}
+
+.boton-profesional:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Formulario */
+.formulario-colores {
+  margin: 20px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.formulario-inline {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.campo-color {
+  flex: 1;
+  min-width: 200px;
+}
+
+.campo-color label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #495057;
+}
+
+.campo-color input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.campo-color input:focus {
+  outline: none;
+  border-color: #1d3557;
+  box-shadow: 0 0 0 0.2rem rgba(29, 53, 87, 0.25);
+}
+
+.boton-guardar {
+  height: 56px;
+  font-weight: bold;
+  padding: 0 24px;
+}
+
+.boton-cancelar {
+  height: 56px;
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 0 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.boton-cancelar:hover {
+  background: #5a6268;
+}
+
+/* Tabla */
+.colores-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Cabecera de tabla */
+.colores-tabla th {
+  background: #1d3557;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Filas y celdas */
+.colores-tabla td {
+  padding: 14px;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.colores-tabla tr:nth-child(even) {
+  background: #f1f1f1;
+}
+
+.colores-tabla tr:hover {
+  background: rgba(29, 53, 87, 0.1);
+}
+
+/* Vista previa del color */
+.color-preview {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Botones de acción */
+.accion-boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-right: 10px;
+}
+
+.boton-editar {
+  background: #2a9d8f;
+  color: white;
+}
+
+.boton-editar:hover {
+  background: #21867a;
+  box-shadow: 0 4px 10px rgba(42, 157, 143, 0.3);
+}
+
+.boton-eliminar {
+  background: #e63946;
+  color: white;
+}
+
+.boton-eliminar:hover {
+  background: #d62839;
+  box-shadow: 0 4px 10px rgba(230, 57, 70, 0.3);
+}
+
+.accion-boton mat-icon {
+  font-size: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .formulario-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .campo-color {
+    min-width: 100%;
+  }
+  
+  .colores-container {
+    width: 95%;
+    margin: 2px auto;
+  }
+}

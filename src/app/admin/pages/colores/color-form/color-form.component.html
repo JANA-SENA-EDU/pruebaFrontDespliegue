@@ -1,0 +1,55 @@
+<div class="dialog-container">
+  <h2 mat-dialog-title>{{ isEditMode ? 'Editar Color' : 'Nuevo Color' }}</h2>
+  
+  <form [formGroup]="colorForm" (ngSubmit)="onSubmit()" class="color-form">
+    <mat-dialog-content>
+      <!-- Código de color -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Código de color (hex)</mat-label>
+        <input matInput 
+               formControlName="codigoColor" 
+               placeholder="#ffffff"
+               maxlength="7">
+        <mat-error *ngIf="colorForm.get('codigoColor')?.hasError('required')">
+          El código de color es obligatorio
+        </mat-error>
+        <mat-error *ngIf="colorForm.get('codigoColor')?.hasError('pattern')">
+          Debe ser un código hexadecimal válido (ej: #ffffff)
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Nombre del color -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Nombre del color</mat-label>
+        <input matInput 
+               formControlName="nombreColor" 
+               placeholder="Nombre del color"
+               maxlength="50">
+        <mat-error *ngIf="colorForm.get('nombreColor')?.hasError('required')">
+          El nombre del color es obligatorio
+        </mat-error>
+        <mat-error *ngIf="colorForm.get('nombreColor')?.hasError('maxlength')">
+          El nombre no puede exceder 50 caracteres
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Vista previa del color -->
+      <div class="color-preview-container" *ngIf="colorForm.get('codigoColor')?.value">
+        <label>Vista previa:</label>
+        <div class="color-preview-large" 
+             [style.backgroundColor]="colorForm.get('codigoColor')?.value">
+        </div>
+      </div>
+    </mat-dialog-content>
+
+    <mat-dialog-actions align="end">
+      <button mat-button type="button" (click)="onCancel()">Cancelar</button>
+      <button mat-flat-button 
+              type="submit" 
+              color="primary" 
+              [disabled]="colorForm.invalid">
+        {{ isEditMode ? 'Actualizar' : 'Guardar' }}
+      </button>
+    </mat-dialog-actions>
+  </form>
+</div>

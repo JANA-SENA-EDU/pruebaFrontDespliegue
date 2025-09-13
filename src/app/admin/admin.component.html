@@ -1,0 +1,40 @@
+<app-navbar (toggleSidebar)="sidenav.toggle()"></app-navbar>
+<mat-sidenav-container class="admin-container">
+    <!-- Sidebar -->
+    <mat-sidenav #sidenav mode="side" opened class="sidenav">
+      <mat-nav-list class="sidebar-list">
+        <a mat-list-item routerLink="/admin/usuarios" routerLinkActive="active-link" class="sidebar-link">
+          <mat-icon class="sidebar-icon">group</mat-icon>
+          <span class="sidebar-text">Usuarios</span>
+        </a>
+        <a mat-list-item routerLink="/admin/productos" routerLinkActive="active-link" class="sidebar-link">
+          <mat-icon class="sidebar-icon">inventory</mat-icon>
+          <span class="sidebar-text">Productos</span>
+        </a>
+        <a mat-list-item routerLink="/admin/categorias" routerLinkActive="active-link" class="sidebar-link">
+          <mat-icon class="sidebar-icon">category</mat-icon>
+          <span class="sidebar-text">Categorías</span>
+        </a>
+
+        <a mat-list-item routerLink="/admin/pedidos" routerLinkActive="active-link" class="sidebar-link">
+          <mat-icon class="sidebar-icon">shopping_cart</mat-icon>
+          <span class="sidebar-text">Cotizaciones</span>
+        </a>
+        <a mat-list-item routerLink="/admin/estadoProductos" routerLinkActive="active-link" class="sidebar-link">
+          <mat-icon class="sidebar-icon">fact_check</mat-icon>
+          <span class="sidebar-text">Estado Producto</span>
+        </a>
+        <a mat-list-item routerLink="/admin/colores" routerLinkActive="active-link" class="sidebar-link">
+          <mat-icon class="sidebar-icon">palette</mat-icon>
+        <span class="sidebar-text">Colores</span>
+</a>
+      </mat-nav-list>
+    </mat-sidenav>
+  
+    <!-- Contenido Principal -->
+    <mat-sidenav-content>
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

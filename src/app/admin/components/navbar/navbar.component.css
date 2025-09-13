@@ -1,0 +1,36 @@
+.navbar {
+  background-color: #0660EC; /* Azul del sidebar */
+  color: #fff; /* Texto en blanco */
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.spacer {
+  flex: 1;
+}
+
+/* Botón de cerrar sesión con color rojo */
+.logout-button {
+  display: flex;
+  align-items: center;
+  color: #fff; /* Letra blanca */
+  background-color: #E53935; /* Rojo elegante */
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.3s ease-in-out;
+}
+
+.logout-button:hover {
+  background-color: #C62828; /* Rojo más oscuro al pasar el mouse */
+}
+
+.logout-icon {
+  margin-right: 6px;
+  color: #fff;
+}

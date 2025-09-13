@@ -1,0 +1,73 @@
+/* Contenedor principal */
+.admin-container {
+  height: 100vh;
+  display: flex;
+}
+
+/* Sidebar */
+.sidenav {
+  width: 260px;
+  background: #111827; /* Azul oscuro elegante */
+  padding-top: 16px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Lista de navegación */
+.sidebar-list {
+  padding: 0;
+}
+
+/* Enlaces del sidebar */
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 14px 20px;
+  color: white !important; /* Asegura que el texto sea blanco */
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Íconos */
+.sidebar-icon {
+  margin-right: 12px;
+  font-size: 22px;
+  color: #60a5fa; /* Azul claro vibrante */
+}
+
+/* Texto del sidebar */
+.sidebar-text {
+  color: white !important; /* Forzar el texto a ser blanco */
+}
+
+/* Efecto hover */
+.sidebar-link:hover {
+  background: rgba(96, 165, 250, 0.25); /* Azul claro translúcido */
+  transform: scale(1.02);
+  color: white !important; /* Mantiene el texto blanco */
+}
+
+/* Enlace activo */
+.active-link {
+  background: #2563eb; /* Azul vibrante */
+  color: white !important;
+  font-weight: bold;
+}
+
+/* Contenido principal */
+mat-sidenav-content {
+  flex-grow: 1;
+  background: #f3f4f6; /* Gris claro para contraste */
+  padding: 16px;
+}
+
+/* Ajuste de contenido */
+.content {
+  padding: 16px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+

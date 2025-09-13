@@ -1,0 +1,74 @@
+<!-- Título -->
+<div>
+  <h2 mat-dialog-title class="titulo-dialog">{{ esEdicion ? 'Editar Usuario' : 'Registrar Usuario' }}</h2>
+</div>
+
+<mat-dialog-content [formGroup]="usuarioForm" class="contenido-dialog">
+
+  <!-- Nombre -->
+  <mat-form-field appearance="outline" class="full-width campo">
+    <mat-label>Nombre</mat-label>
+    <input matInput formControlName="nombre" placeholder="Ingrese el nombre">
+    <mat-error *ngIf="usuarioForm.get('nombre')?.invalid && usuarioForm.get('nombre')?.touched">
+      El nombre es obligatorio
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Username (solo en registro) -->
+  <mat-form-field *ngIf="!esEdicion" appearance="outline" class="full-width campo">
+    <mat-label>Usuario</mat-label>
+    <input matInput formControlName="username" placeholder="Ingrese un nombre de usuario">
+    <mat-error *ngIf="usuarioForm.get('username')?.invalid && usuarioForm.get('username')?.touched">
+      El usuario es obligatorio
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Email -->
+  <mat-form-field appearance="outline" class="full-width campo">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" formControlName="correo" placeholder="Ingrese el correo">
+    <mat-error *ngIf="usuarioForm.get('correo')?.invalid && usuarioForm.get('correo')?.touched">
+      Ingrese un correo válido
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Teléfono -->
+  <mat-form-field appearance="outline" class="full-width campo">
+    <mat-label>Teléfono</mat-label>
+    <input matInput type="tel" formControlName="telefono" placeholder="Ingrese el número de teléfono">
+    <mat-error *ngIf="usuarioForm.get('telefono')?.invalid && usuarioForm.get('telefono')?.touched">
+      El teléfono es obligatorio
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Contraseña (solo en registro) -->
+  <mat-form-field *ngIf="!esEdicion" appearance="outline" class="full-width campo">
+    <mat-label>Contraseña</mat-label>
+    <input matInput 
+           [type]="mostrarPassword ? 'text' : 'password'"
+           formControlName="password"
+           (blur)="onBlurPassword()" 
+           (input)="onPasswordChange($event)">
+    <button mat-icon-button matSuffix (click)="togglePassword()">
+      <mat-icon>{{ mostrarPassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+    </button>
+  </mat-form-field>
+  
+  <!-- Estado -->
+  <mat-form-field appearance="outline" class="full-width campo">
+    <mat-label>Estado</mat-label>
+    <mat-select formControlName="estado">
+      <mat-option value="activo">Activo</mat-option>
+      <mat-option value="inactivo">Inactivo</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+</mat-dialog-content>
+
+<!-- Botones -->
+<mat-dialog-actions align="end" class="botones-dialog">
+  <button mat-button (click)="onCancelar()" class="boton-cancelar">Cancelar</button>
+  <button mat-raised-button color="primary" [disabled]="usuarioForm.invalid" (click)="onGuardar()" class="boton-guardar">
+    {{ esEdicion ? 'Actualizar' : 'Guardar' }}
+  </button>
+</mat-dialog-actions>

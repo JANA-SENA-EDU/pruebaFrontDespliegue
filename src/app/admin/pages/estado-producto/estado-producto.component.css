@@ -1,0 +1,54 @@
+.estado-container {
+  width: 85%;
+  margin: 20px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.estado-header {
+  background: #1d3557;
+  color: white;
+  padding: 18px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.formulario {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+mat-form-field {
+  flex: 1;
+}
+
+.estado-tabla {
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.estado-tabla th {
+  background: #1d3557;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+}
+
+.estado-tabla td {
+  padding: 12px;
+  font-size: 14px;
+}
+
+.estado-tabla tr:nth-child(even) {
+  background: #f1f1f1;
+}
+
+.estado-tabla tr:hover {
+  background: rgba(29, 53, 87, 0.1);
+}

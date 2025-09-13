@@ -1,0 +1,46 @@
+.dialog-container {
+  width: 400px;
+  max-width: 90vw;
+}
+
+.color-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.color-preview-container {
+  margin: 16px 0;
+  text-align: center;
+}
+
+.color-preview-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #495057;
+}
+
+.color-preview-large {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #333;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+mat-dialog-actions {
+  padding: 16px 0;
+  gap: 8px;
+}
+
+mat-dialog-title {
+  color: #1d3557;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
